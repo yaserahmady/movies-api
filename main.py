@@ -25,7 +25,7 @@ def get_uci_movies():
         "https://www.ucicinemas.it/cinema/lombardia/bergamo/uci-cinemas-curno-bergamo/"
     )
     r = requests.get(url)
-    soup = BeautifulSoup(r.text, "lxml")
+    soup = BeautifulSoup(r.text, "html.parser")
 
     showtimes = {}
 
