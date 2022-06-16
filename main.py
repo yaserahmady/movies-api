@@ -3,10 +3,10 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 
-www = FastAPI()
+app = FastAPI()
 
 
-@www.get("/")
+@app.get("/")
 def index():
     output = {}
     for i in range(10):
@@ -15,7 +15,7 @@ def index():
     return output
 
 
-@www.get("/movies")
+@app.get("/movies")
 def movies_endpoint():
     return get_uci_movies()
 
